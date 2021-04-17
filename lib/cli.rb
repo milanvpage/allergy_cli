@@ -81,6 +81,13 @@ class CLI
         puts "*************************".colorize(:color => :light_blue)
         puts "Title: #{recipe.title}".colorize(:color => :yellow)
         puts ""
+        puts "URL: #{recipe.href}".colorize(:color => :yellow)
+        puts ""
+        puts "Ingredients: #{recipe.ingredients}".colorize(:color => :yellow)
+        puts "*************************".colorize(:color => :light_blue)
+        puts ""
+        puts ""
+        puts "Enter y to see more Recipes regarding the ingredients you supplied. Enter exit to exit the program/enter different ingredients and/or a different Allergy!".colorize(:color => :green)
 
 
 
