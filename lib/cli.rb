@@ -76,6 +76,11 @@ class CLI
         if recipe == "exit"
           goodbye
         elsif recipe.class == Recipe
+        puts ""
+        puts ""
+        puts "*************************".colorize(:color => :light_blue)
+        puts "Title: #{recipe.title}".colorize(:color => :yellow)
+        puts ""
 
 
 
