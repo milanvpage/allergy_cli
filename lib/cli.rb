@@ -41,6 +41,13 @@ class CLI
     def goodbye
         puts "Hope we could find you a recipe to fill your tummy with Love!".colorize(:color => :light_blue)
     end
-    
+
+    def invalid
+        puts "Item not found? Enter y to try again!".colorize(:color => :light_blue)
+      menu
+      #print_recipes
+    end
+
+
 
 end
