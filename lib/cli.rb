@@ -88,7 +88,10 @@ class CLI
         puts ""
         puts ""
         puts "Enter y to see more Recipes regarding the ingredients you supplied. Enter exit to exit the program/enter different ingredients and/or a different Allergy!".colorize(:color => :green)
-
+        else
+            invalid
+        end
+    end   
 
 
 end
