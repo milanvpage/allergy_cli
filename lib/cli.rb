@@ -6,4 +6,8 @@ class CLI
             input = user_input
             greet(input)
         end
+
+        def user_input
+            gets.strip 
+          end
 end
