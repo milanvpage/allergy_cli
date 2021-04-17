@@ -1,2 +1,9 @@
 #!/usr/bin/env ruby
 require_relative '../lib/environment.rb'
+
+#binding.pry
+
+#CLI = CLI.new
+#CLI.start
+
+CLI.new.start
