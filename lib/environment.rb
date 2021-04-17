@@ -7,3 +7,5 @@ module AllergyCli
   # Your code goes here...
 end
 require "bundler"
+Bundler.require
+require_all './lib/food_allergy_cli'
