@@ -69,7 +69,13 @@ class CLI
           menu
         
   
-      end
+    end
+
+    def recipe_details(recipe)
+     #binding.pry
+        if recipe == "exit"
+          goodbye
+        elsif recipe.class == Recipe
 
 
 
