@@ -17,4 +17,10 @@ class Recipe
     def self.all
         @@all
     end
+
+    def self.find_by_input(recipe_title)
+        self.all.detect do |recipe|
+            recipe.title == recipe_title
+        end
+    end
 end
