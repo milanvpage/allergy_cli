@@ -5,4 +5,5 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in allergy_cli.gemspec
 
 gem "pry"
+gem "json"
 
