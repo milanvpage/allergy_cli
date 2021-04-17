@@ -48,6 +48,14 @@ class CLI
       #print_recipes
     end
 
+    def print_recipes
+        Recipe.all.each.with_index(1) do |recipe, index|
+            puts "#{index}. #{recipe.title}".colorize(:color => :red)
+
+        end
+        select_recipes
+    end
+
 
 
 end
