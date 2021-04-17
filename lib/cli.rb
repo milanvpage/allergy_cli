@@ -56,6 +56,21 @@ class CLI
         select_recipes
     end
 
+    def select_recipes
+        puts "Please enter the name of the Recipe you would like to know more information about".colorize(:color => :light_blue)
+          input = user_input
+          if Recipe.find_by_input(input)
+          recipe = Recipe.find_by_input(input)
+          else 
+          recipe = input
+          end
+  
+          recipe_details(recipe)
+          menu
+        
+  
+      end
+
 
 
 end
