@@ -2,7 +2,7 @@
 
 In this CLI app, our CLI is grabbing recipes from  "http://www.recipepuppy.com" based off the input we give it. 
 This app was originally created to output recipes based on an Allergy type inputed to the server, but instead it can do so much more. 
-This CLI can take in an input of ingredients and output recipes based off any valid ingredients you inputted to the command line. 
+This CLI can take in an input of ingredients (seperated by commas) and output a list of recipes based off any valid ingredients you inputted to the command line. 
 Therefore Allergy_CLI can give you Allergy friendly recipes on top of what you got hiding inside your pantry!
 
 ## Installation
