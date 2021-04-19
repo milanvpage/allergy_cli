@@ -1,7 +1,7 @@
 class CLI 
     #binding.pry
     def start
-       puts "Welcome! I hope we can find you a recipe you love that matches your needs! Enter ingredients you would like to see in a Recipe and/or a Recipe to fit your Allergy needs?".colorize(:color => :light_blue)
+       puts "Welcome! I hope we can find you a recipe you love that matches your needs! Enter ingredients you would like to see in a Recipe and/or an Allergy that fits your recipe needs?".colorize(:color => :light_blue)
             
         input = user_input
         greet(input)
@@ -13,13 +13,18 @@ class CLI
 
     def greet(intolerance)
       API.get_data(intolerance)
-      if Recipe.all.length != 0
+      if intolerance == "exit"
+         goodbye
+      elsif Recipe.all.length != 0
         puts "Lets see what Yummy dishes we can find with #{intolerance}! Enter y to see list, enter exit to exit".colorize(:color => :green)
         menu
+      
       else
         puts "Invalid entry lets bring you back to the start!"
         start
-      end  
+      end 
+      
+
     end  
 
     def menu
@@ -45,7 +50,6 @@ class CLI
     def invalid
         puts "Item not found? Enter y to try again!".colorize(:color => :light_blue)
       menu
-      #print_recipes
     end
 
     def print_recipes
@@ -66,9 +70,6 @@ class CLI
           end
   
           recipe_details(recipe)
-          menu
-        
-  
     end
 
     def recipe_details(recipe)
@@ -88,8 +89,9 @@ class CLI
         puts ""
         puts ""
         puts "Enter y to see more Recipes regarding the ingredients you supplied. Enter exit to exit the program/enter different ingredients and/or a different Allergy!".colorize(:color => :green)
+        menu
         else
-            invalid
+           invalid
         end
     end   
 

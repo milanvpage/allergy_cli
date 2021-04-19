@@ -9,4 +9,4 @@ module AllergyCli
 end
 require "bundler"
 Bundler.require
-require_all './lib/food_allergy_cli'
+require_all './lib/allergy_cli'
